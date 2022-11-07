@@ -1,0 +1,33 @@
+Explain the functionalities in your prototype
+• Describe the design and assumptions you made
+• Explain the key data structures used
+• Produce executable code and build procedures (for Questions 1 & 3)
+• Provide test cases to verify your implementation (for Questions 1 & 3)
+
+Question 1 :
+* The Functionality of Prototype of First Question is below :
+- The Application takes given source and target, then uses Java JAXB parser to unmarshall XML to Java Object
+- The data is then places in in-memory data structures and then filtered
+- The filtered data is passed on the DifferenceGenerator to generate the Diff
+- Finally the Diff is supplied to CSVGenerator in order to get the output file.
+
+* Describe the design and assumptions you made
+- There are three MainClass in the design :
+1. XMLMarshaller (Decoupled processing unit)
+2. DifferenceGenerator ( Decoupled processing unit)
+3. CSVGenerator ( Decoupled processing unit)
+
+- All these three files are decoupled to each other and are Arrgregated by Main class
+which process the input data
+
+• Explain the key data structures used
+- The main Data structres used are :
+1. HashMap - in order to keep up look data; O(1) time complexity for  lookup
+2. List - in order have linear data structures which can be iterated by O(n)
+3. Used streams and lambdas
+
+• Produce executable code and build procedures (for Questions 1 & 3)
+- Will be attached with submission
+
+• Provide test cases to verify your implementation (for Questions 1 & 3)
+- Added the required test cases
